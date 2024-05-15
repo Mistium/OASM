@@ -1,0 +1,13 @@
+num = 1000
+a = 0
+b = 1
+c = 0
+i = 0
+:start
+i += 1
+c = a
+c += b
+a = b
+b = c
+if i < num :start
+print c
