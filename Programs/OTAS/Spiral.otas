@@ -1,0 +1,38 @@
+colour = 4095
+pensize = 0
+turn = 4
+radian = 57
+p = 0
+x = 0
+y = 0
+
+pen.colour colour
+pen.size pensize
+
+i = 0
+find = 10000
+
+pen.down
+:loop
+i += 4
+p = i
+p *= radian
+
+- setup x and y
+
+- x calculations
+x = p
+math.sin x
+x *= i
+x /= 10
+
+- y calculations
+y = p
+math.cos y
+y *= i
+y /= 10
+
+pen.colour p
+pen.goto x y
+if i < find :loop
+pen.up
